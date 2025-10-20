@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Max 25 Kitchen — Launching Soon</title>
+<meta name="description" content="Max 25 Kitchen — authentic Jamaican flavors in Farm District, Westmoreland. Launching soon.">
+<link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
+<link rel="apple-touch-icon" href="assets/favicon.jpg">
+<meta property="og:title" content="Max 25 Kitchen — Launching Soon">
+<meta property="og:description" content="Good food, good people — meals into momentum.">
+<meta property="og:image" content="assets/favicon.jpg">
+
+<style>
+  :root{
+    --bg:#0a0a0a;
+    --text:#eaeaea;
+    --muted:#b7b7b7;
+    --radius:18px;
+    --card:#121212;
+    --brand-green:#00c16a;
+    --brand-orange:#ff6a00;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:980px;margin:0 auto;padding:28px;position:relative}
+  header{display:flex;gap:16px;align-items:center;margin:8px 0 24px}
+  header img{width:170px;max-width:48vw;height:auto}
+  .tag{color:var(--muted)}
+  .hero{
+    position:relative;overflow:hidden;
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02)), #121212;
+    border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:28px;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:-18% -18% -18% -18%;
+    background:
+      radial-gradient(60% 50% at 15% 20%, rgba(255,106,0,.16), transparent 60%),
+      radial-gradient(70% 55% at 85% 15%, rgba(0,193,106,.18), transparent 60%),
+      radial-gradient(70% 60% at 60% 90%, rgba(255,106,0,.10), transparent 65%);
+    filter: blur(12px) saturate(110%);pointer-events:none;z-index:0;
+  }
+  .hero>*{position:relative;z-index:1}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+  .btn{display:inline-flex;gap:8px;align-items:center;padding:12px 18px;border-radius:14px;border:1px solid rgba(255,255,255,.1);background:#161616;color:var(--text);text-decoration:none;font-weight:600}
+  .btn.accent{background:linear-gradient(90deg, var(--brand-green), #0aa45c);border:0;color:#07160f}
+  .card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:18px;margin-top:18px}
+  .map{width:100%;height:320px;border:0;border-radius:var(--radius)}
+  footer{text-align:center;color:#9a9a9a;margin:28px 0 12px}
+  body::before{
+    content:"";position:fixed;inset:0;
+    background:radial-gradient(40% 30% at 10% -5%, rgba(0,193,106,.10), transparent 60%),
+               radial-gradient(35% 28% at 100% 10%, rgba(255,106,0,.10), transparent 65%);
+    pointer-events:none;z-index:0;
+  }
+  @media (max-width:560px){
+    header{flex-direction:column;align-items:flex-start} header img{width:150px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="assets/logo.svg" alt="Max 25 Kitchen logo">
+    <div>
+      <h1 style="margin:0">Max 25 Kitchen</h1>
+      <div class="tag">Love on a plate, passed forward to our community.</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2 style="margin:6px 0 8px">Launching soon in Farm District, Westmoreland 🇯🇲</h2>
+    <p style="margin:0 0 14px;color:var(--muted)">We’re bringing authentic Jamaican flavors to Farm District. Good food, good people — <strong>meals into momentum</strong>. We can’t wait to cook for you.</p>
+    <div class="cta-row">
+      <a class="btn accent" href="https://wa.me/44XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp Us</a>
+      <a class="btn" href="mailto:hello@max25kitchen.com">Email hello@max25kitchen.com</a>
+      <a class="btn" href="https://instagram.com/max25kitchen" target="_blank" rel="noopener">Follow @max25kitchen</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3 style="margin:0 0 10px">Find Us</h3>
+    <iframe class="map" loading="lazy" allowfullscreen
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d-78.1600!3d18.2000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sFarm%20District%2C%20Westmoreland%2C%20Jamaica!5e0!3m2!1sen!2sJM!4v0000000000">
+    </iframe>
+  </section>
+
+  <section class="card">
+    <h3 style="margin:0 0 10px">Our Promise</h3>
+    <p style="margin:0;color:var(--muted)">We cook with love, serve with care, and support the people and farms around us. Every plate we serve is a chance to give back and keep our community moving forward.</p>
+  </section>
+
+  <footer>© <span id="y"></span> Max 25 Kitchen · <a href="mailto:hello@max25kitchen.com" style="color:inherit">Contact</a></footer>
+</div>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
